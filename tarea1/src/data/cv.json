@@ -1,0 +1,53 @@
+{
+  "name": "Omar Daniel Ponce Márquez",
+  "role": "Software Developer",
+  "summary": "Software Engineering student with experience in web and desktop applications, databases, and problem-solving, focused on building efficient and scalable solutions.",
+  "contact": {
+    "email": "omardponce@gmail.com",
+    "phone": "+52 33 12651925",
+    "location": "Guadalajara, JAL, MX",
+    "links": {
+      "github": "https://github.com/OmarPCode",
+      "linkedin": "www.linkedin.com/in/omar-daniel-ponce-marquez-bb9701328"
+    }
+  },
+  "education": [
+    {
+      "school": "ITESO",
+      "degree": "Software Development Engineering",
+      "period": "2022 - 2026"
+    },
+    {
+      "school": "CETI",
+      "degree": "Technologist in Electronics and Communications",
+      "period": "2017 - 2021"
+    }
+  ],
+  "skills": {
+    "languages": ["Java", "Python", "C/C++", "SQL", "JavaScript", "HTML", "CSS"],
+    "tools": ["VS Code", "SQL Server", "Git", "Eclipse"],
+    "soft": ["Teamwork", "Adaptability", "Problem-solving"]
+  },
+  "projects": [
+    {
+      "title": "Basic Hospital Management System",
+      "stack": ["Java"],
+      "year": 2024,
+      "desc": "System for managing schedules, appointments, and medical staff availability."
+    },
+    {
+      "title": "Restaurant Orders Database",
+      "stack": ["SQL"],
+      "year": 2024,
+      "desc": "Normalized database with primary/foreign keys and CRUD operations."
+    }
+  ],
+  "contactForm": {
+    "service": "formsubmit",
+    "action": "https://formsubmit.co",
+    "extra": {
+      "_captcha": "false",
+      "_template": "table"
+    }
+  }
+}

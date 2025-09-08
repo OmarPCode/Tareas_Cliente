@@ -1,0 +1,21 @@
+@use "variables" as *;
+
+@mixin container {
+  width: min(100% - 2rem, $container);
+  margin-inline: auto;
+}
+
+@mixin card {
+  background: #161a22;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: 1.25rem;
+}
+
+@mixin mq($size) {
+  @if $size == md {
+    @media (min-width: 768px) { @content; }
+  } @else if $size == lg {
+    @media (min-width: 1024px) { @content; }
+  }
+}

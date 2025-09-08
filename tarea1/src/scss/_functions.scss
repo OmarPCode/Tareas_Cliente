@@ -1,0 +1,3 @@
+@function clampSize($min, $pref, $max) {
+  @return clamp($min, $pref, $max);
+}

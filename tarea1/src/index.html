@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CV | Tu Nombre</title>
+  <link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <img class="avatar" src="./images/profile.jpg" alt="Foto de perfil" />
+      <div>
+        <h1 id="name">Omar Daniel Ponce Márquez</h1>
+        <p id="role" class="muted">Rol</p>
+        <p id="summary"></p>
+        <ul id="links" class="links"></ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="container grid">
+    <section class="card">
+      <h2>Education</h2>
+      <ul id="education"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Proyects</h2>
+      <div id="projects" class="grid-cols"></div>
+    </section>
+
+    <section class="card">
+      <h2>Skills</h2>
+      <h3>Programing lenguages</h3>
+      <ul id="skills-langs" class="tags"></ul>
+      <h3>Tools</h3>
+      <ul id="skills-tools" class="tags"></ul>
+      <h3>Soft skills</h3>
+      <ul id="skills-soft" class="tags"></ul>
+    </section>
+
+    <section class="card full">
+      <h2>Contact</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <label>Name
+            <input type="text" name="name" required />
+          </label>
+          <span class="error" data-for="name"></span>
+        </div>
+        <div class="form-row">
+          <label>Email
+            <input type="email" name="email" required />
+          </label>
+          <span class="error" data-for="email"></span>
+        </div>
+        <div class="form-row">
+          <label>Menssage
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <span class="error" data-for="message"></span>
+        </div>
+
+        <button type="submit">Submit</button>
+        <p class="muted" id="form-status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Omar Daniel Ponce Márquez</small>
+    </div>
+  </footer>
+
+  <script defer src="./assets/js/main.js"></script>
+</body>
+</html>

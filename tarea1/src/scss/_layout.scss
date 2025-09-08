@@ -1,0 +1,28 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.container { @include container; }
+.grid {
+  display: grid;
+  gap: 1rem;
+  @include mq(md) { grid-template-columns: repeat(3, 1fr); }
+}
+.grid .full { grid-column: 1 / -1; }
+
+.site-header {
+  padding-block: 1.5rem;
+  background: linear-gradient(90deg, rgba(63,81,181,.3), rgba(0,188,212,.2));
+  .container { display: flex; gap: 1rem; align-items: center; }
+  .avatar { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; }
+}
+
+.site-footer { padding: 2rem 0; color: #9aa0a6; }
+
+.links { display: flex; gap: .75rem; margin: .5rem 0 0; flex-wrap: wrap; }
+.links li::before { content: "• "; color: #566; }
+
+.form-row { display: grid; gap: .35rem; margin-bottom: .75rem; }
+input, textarea {
+  background: #0e121a; color: #e6e6e6; border: 1px solid #242a36; border-radius: 10px;
+  padding: .7rem .9rem; width: 100%;
+}
