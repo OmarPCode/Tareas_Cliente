@@ -25,8 +25,3 @@ npm run dev
 ```
 - Ese correo será el destino del formulario al enviarse mediante FormSubmit
 
-
-## Instalación
-```bash
-cd tarea1
-npm install
