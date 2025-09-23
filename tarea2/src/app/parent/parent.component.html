@@ -1,0 +1,12 @@
+<div style="display: flex; gap: 20px;">
+  <app-left-panel
+    [elementos]="elementos"
+    [seleccionado]="seleccionado"
+    (seleccionar)="onSeleccionar($event)">
+  </app-left-panel>
+
+  <app-right-panel
+    [titulo]="seleccionado"
+    (limpiar)="onLimpiar()">
+  </app-right-panel>
+</div>

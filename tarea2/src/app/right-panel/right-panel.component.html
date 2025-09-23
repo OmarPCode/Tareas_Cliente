@@ -1,0 +1,10 @@
+<div>
+  <ng-container *ngIf="titulo; else noSeleccion">
+    <h3>{{ titulo }}</h3>
+    <button (click)="onLimpiar()">Limpiar</button>
+  </ng-container>
+
+  <ng-template #noSeleccion>
+    <p>No hay ningún elemento seleccionado</p>
+  </ng-template>
+</div>

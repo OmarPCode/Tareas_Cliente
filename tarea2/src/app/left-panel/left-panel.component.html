@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let item of elementos"
+      (click)="seleccionarElemento(item)"
+      [style.background]="item === seleccionado ? '#d1c4e9' : 'transparent'"
+      style="cursor: pointer; padding: 5px;">
+    {{ item }}
+  </li>
+</ul>
