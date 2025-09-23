@@ -20,7 +20,7 @@ Mientras no haya selección, se muestra un mensaje de aviso.
 
 ### 1. Clonar el repositorio
 ```bash
-git clone <URL_DE_TU_REPOSITORIO>
+git clone https://github.com/OmarPCode/Tareas_Cliente.git
 cd tarea2
 ```
 ### 2. Instalar dependencias
