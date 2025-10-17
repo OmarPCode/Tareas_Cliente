@@ -1,0 +1,39 @@
+<div class='registro-wrapper'>
+  <h1>Registro de usuario</h1>
+  <form [formGroup]='form' (ngSubmit)='onSubmit()' novalidate>
+    <div class='form-field'>
+      <label for='nombre'>Nombre</label>
+      <input id='nombre' type='text' formControlName='nombre' />
+      <small class='error' *ngIf='f.nombre.touched && f.nombre.errors?.["required"]'>El nombre es requerido.</small>
+      <small class='error' *ngIf='f.nombre.touched && f.nombre.errors?.["minlength"]'>Mínimo 2 caracteres.</small>
+    </div>
+    <div class='form-field'>
+      <label for='email'>Correo electrónico</label>
+      <input id='email' type='email' formControlName='email' />
+      <small class='error' *ngIf='f.email.touched && f.email.errors?.["required"]'>El correo es requerido.</small>
+      <small class='error' *ngIf='f.email.touched && f.email.errors?.["email"]'>Formato de correo inválido.</small>
+    </div>
+    <div class='form-field'>
+      <label for='edad'>Edad</label>
+      <input id='edad' type='number' formControlName='edad' min='0' />
+      <small class='error' *ngIf='f.edad.touched && f.edad.errors?.["required"]'>La edad es requerida.</small>
+      <small class='error' *ngIf='f.edad.touched && f.edad.errors?.["min"]'>Debes ser mayor o igual a 18.</small>
+    </div>
+    <div class='form-field'>
+      <label for='password'>Contraseña</label>
+      <input id='password' type='password' formControlName='password' />
+      <small class='error' *ngIf='f.password.touched && f.password.errors?.["required"]'>La contraseña es requerida.</small>
+      <small class='error' *ngIf='f.password.touched && f.password.errors?.["minlength"]'>Mínimo 8 caracteres.</small>
+    </div>
+    <div class='form-field'>
+      <label for='confirmarPassword'>Confirmar contraseña</label>
+      <input id='confirmarPassword' type='password' formControlName='confirmarPassword' />
+      <small class='error' *ngIf='f.confirmarPassword.touched && (form.errors?.["passwordMismatch"] || f.confirmarPassword.errors?.["passwordMismatch"])'>Las contraseñas no coinciden.</small>
+    </div>
+    <div class='form-field terms'>
+      <label><input type='checkbox' formControlName='terminos' /> Acepto los términos y condiciones</label>
+      <small class='error' *ngIf='f.terminos.touched && f.terminos.errors?.["requiredTrue"]'>Debes aceptar los términos.</small>
+    </div>
+    <button type='submit' [disabled]='form.invalid'>Crear cuenta</button>
+  </form>
+</div>
