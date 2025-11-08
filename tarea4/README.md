@@ -81,7 +81,7 @@ Este proyecto implementa un **chat en tiempo real** usando **Angular** en el cli
 Se ven:
 - Mensajes en tiempo real en ambos chats.
 - Notificaciones cuando un nuevo usuario se conecta.
-
+- Cuando se desconecta
 ---
 
 
