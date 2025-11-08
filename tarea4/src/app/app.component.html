@@ -1,0 +1,49 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+
+  <div *ngIf="!isLogged" class="card">
+    <h2>Ingresa tu nombre</h2>
+    <form (ngSubmit)="login()">
+      <input
+        type="text"
+        [(ngModel)]="username"
+        name="username"
+        placeholder="Tu nombre (mín. 3 caracteres)"
+        required
+        minlength="3"
+      />
+      <button type="submit" [disabled]="username.trim().length < 3">Entrar</button>
+    </form>
+  </div>
+
+  <div *ngIf="isLogged" class="card">
+    <div class="status">
+      Conectado como <strong>{{ username }}</strong>
+    </div>
+
+    <div id="chatBox" class="chat-box">
+      <div *ngFor="let note of notifications; let i = index" class="note">
+        {{ note }}
+      </div>
+
+      <div *ngFor="let m of messages; trackBy: trackByTs" class="msg">
+        <div class="meta">
+          <span class="user">{{ m.user }}</span>
+          <span class="time">{{ m.timestamp | date:'shortTime' }}</span>
+        </div>
+        <div class="text">{{ m.text }}</div>
+      </div>
+    </div>
+
+    <form class="composer" (ngSubmit)="send()">
+      <input
+        type="text"
+        [(ngModel)]="messageText"
+        name="message"
+        placeholder="Escribe tu mensaje..."
+        required
+      />
+      <button type="submit" [disabled]="!messageText.trim()">Enviar</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+  h2 {
+    margin-top: 0;
+  }
+
+  form {
+    display: flex;
+    gap: .5rem;
+
+    input[type="text"] {
+      flex: 1;
+      padding: .6rem .8rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    button {
+      padding: .6rem 1rem;
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #0ea5e9;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    button:disabled {
+      opacity: .6;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.status {
+  margin-bottom: .6rem;
+  font-size: .95rem;
+  color: #444;
+}
+
+.chat-box {
+  height: 380px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: .75rem;
+  background: #fafafa;
+  margin-bottom: .6rem;
+}
+
+.note {
+  font-size: .9rem;
+  color: #6b7280;
+  margin: .25rem 0;
+}
+
+.msg {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: .5rem .6rem;
+  margin: .4rem 0;
+
+  .meta {
+    display: flex;
+    gap: .6rem;
+    font-size: .8rem;
+    color: #6b7280;
+    margin-bottom: .2rem;
+
+    .user { font-weight: 600; color: #111827; }
+  }
+  .text { white-space: pre-wrap; }
+}
+
+.composer {
+  display: flex;
+  gap: .5rem;
+}
